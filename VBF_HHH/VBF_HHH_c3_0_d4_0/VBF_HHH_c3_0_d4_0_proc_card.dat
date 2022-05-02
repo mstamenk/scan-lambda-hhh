@@ -1,0 +1,12 @@
+set group_subprocesses Auto 
+set ignore_six_quark_processes False 
+set loop_optimized_output True 
+set complex_mass_scheme False 
+import model loop_sm_c3d4
+define lep = e+ e- mu+ mu-
+define nus = ve~ vm~ ve vm
+define j = u c d s u~ c~ d~ s~
+generate p p > h h h j j $$ z w+ w- 
+
+output VBF_HHH_c3_0_d4_0 -nojpeg 
+
