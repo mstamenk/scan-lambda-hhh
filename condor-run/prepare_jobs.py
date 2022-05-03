@@ -25,7 +25,7 @@ for fil in files:
 
 
     with open('submit_%s.sh'%fil,'w') as f:
-        new_submit = submit.replace('jobs.sh', 'job_%s.sh'%fil)
+        new_submit = submit.replace('job.sh', 'job_%s.sh'%fil)
         new_submit = new_submit.replace('output/job.$(ClusterId).$(ProcId).out','output/job_%s.$(ClusterId).$(ProcId).out'%fil)
         f.write(new_submit)
         
